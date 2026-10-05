@@ -1,0 +1,65 @@
+.erp-focus {
+  display: grid;
+  grid-template-columns: .82fr 1.18fr;
+  gap: clamp(45px, 7vw, 110px);
+  padding: clamp(85px, 10vw, 145px) 8vw;
+  background: #f5f1e8;
+}
+
+.erp-heading {
+  align-self: start;
+  position: sticky;
+  top: 125px;
+}
+
+.erp-heading h2 {
+  font-size: clamp(44px, 5.2vw, 72px);
+  line-height: 1.03;
+  letter-spacing: -.035em;
+  margin: 20px 0 26px;
+}
+
+.erp-heading > p:not(.eyebrow) {
+  color: var(--text);
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+
+.erp-journey {
+  border-top: 1px solid var(--line);
+}
+
+.erp-journey article {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 0 24px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.erp-journey span {
+  grid-row: 1 / 3;
+  color: var(--gold);
+  font: 700 12px var(--sans);
+  letter-spacing: .12em;
+}
+
+.erp-journey h3 {
+  margin: 0 0 8px;
+  font: 400 clamp(27px, 3vw, 39px) var(--serif);
+}
+
+.erp-journey p {
+  margin: 0;
+  color: var(--text);
+}
+
+@media (max-width: 930px) {
+  .erp-focus { grid-template-columns: 1fr; }
+  .erp-heading { position: static; }
+}
+
+@media (max-width: 700px) {
+  .erp-focus { padding-left: 6vw; padding-right: 6vw; }
+  .erp-journey article { grid-template-columns: 42px 1fr; gap: 0 14px; }
+}
